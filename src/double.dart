@@ -1,7 +1,7 @@
 // Doubles (Decimal numbers)
 void main(List<String> args) {
   /* atribuição básica explícita do double */
-  double numberFiveDouble = 5.55;
+  final numberFiveDouble = 5.55;
   print('numberFive -> $numberFiveDouble');
 
   /* quando se atribui um valor inteiro em uma declarção double, ele vira double com .0 no final */

@@ -41,6 +41,8 @@ void main(List<String> args) {
   /* Mesmo esquema aqui, se tentar reatribuir para outro tipo, ou até mesmo string, const não deixa */
   const myPet = 'Guinea Pig';
 
+  print('My pet is $myPet');
+
   /* é útil saber que podemos concatenar strings dessas formas: */
   String compoundName = name + otherName;
   print('compoundName -> $compoundName');

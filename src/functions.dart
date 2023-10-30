@@ -21,6 +21,7 @@ void main(List<String> args) {
 
   final String sentenceReturned = displayNameInSentence(
       name: 'William',
+      // passando o callback, podemos atribuir direto também a fat arrow function
       printSentence: (nameToPrint) =>
           'This name was displayed through a callback function => $nameToPrint');
   print(sentenceReturned);
@@ -107,7 +108,12 @@ SumOfIntNumbers somOfIntNumbers = (int num1, int num2) {
   return num1 + num2;
 };
 
-typedef PrintSentence = String Function(String);
+// podemos atribuir a função à final, var etc...
+// neste caso o tipo será inferido para int Function(int, int)
+final subtractIntNumbers = (int num1, int num2) => num1 - num2;
+
+// é opcional dizer o nome do parâmetro
+typedef PrintSentence = String Function(String name);
 
 String displayNameInSentence(
     {required String name, required PrintSentence printSentence}) {
